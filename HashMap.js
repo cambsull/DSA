@@ -25,6 +25,7 @@ class HashMap {
     while (current) {
       if (current.data.key === key) {
         current.data = { key, value };
+        return;
       }
       if (!current.next) {
         current.next = new Node({ key, value });
@@ -53,5 +54,13 @@ class HashMap {
     return null;
   }
 } 
+
+const testHash = new HashMap(1);
+
+testHash.assign('KeyOne', 'ValueOne');
+testHash.assign('KeyOne', 'ValueTwo');
+
+console.log(testHash.hashmap[0]);
+
 
 module.exports = HashMap;
