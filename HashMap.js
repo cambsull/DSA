@@ -55,12 +55,4 @@ class HashMap {
   }
 } 
 
-const testHash = new HashMap(1);
-
-testHash.assign('KeyOne', 'ValueOne');
-testHash.assign('KeyOne', 'ValueTwo');
-
-console.log(testHash.hashmap[0]);
-
-
 module.exports = HashMap;
